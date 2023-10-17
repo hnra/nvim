@@ -13,3 +13,6 @@
 [submodule "pack/telescope/opt/telescope.nvim"]
 	path = pack/telescope/opt/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "pack/commentary/start/commentary"]
+	path = pack/commentary/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
