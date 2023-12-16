@@ -11,6 +11,9 @@ vim.opt.scrolloff = 10
 
 vim.g.mapleader = ","
 
+-- Colorscheme
+vim.cmd.colorscheme "catppuccin"
+
 -- Language Server Protocol Configs
 vim.cmd.packadd("nvim-lspconfig")
 vim.o.updatetime = 1000

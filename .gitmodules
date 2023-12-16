@@ -16,3 +16,6 @@
 [submodule "pack/commentary/start/commentary"]
 	path = pack/commentary/start/commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "pack/catppuccin/start/nvim.git"]
+	path = pack/catppuccin/start/nvim.git
+	url = https://github.com/catppuccin/nvim.git
