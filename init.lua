@@ -14,6 +14,14 @@ vim.g.mapleader = ","
 -- Colorscheme
 vim.cmd.colorscheme "catppuccin"
 
+-- Treesitter
+require"nvim-treesitter.configs".setup{
+  ensure_installed = { "haskell", "lua" },
+  highlight = {
+    enable = true,
+  }
+}
+
 -- Language Server Protocol Configs
 vim.cmd.packadd("nvim-lspconfig")
 vim.o.updatetime = 1000

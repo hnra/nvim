@@ -19,3 +19,6 @@
 [submodule "pack/catppuccin/start/nvim.git"]
 	path = pack/catppuccin/start/nvim.git
 	url = https://github.com/catppuccin/nvim.git
+[submodule "pack/treesitter/opt/nvim-treesitter"]
+	path = pack/treesitter/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
