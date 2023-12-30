@@ -11,11 +11,20 @@ vim.opt.scrolloff = 10
 
 vim.g.mapleader = ","
 
+-- Packages
+vim.cmd.packadd("catppuccin")
+vim.cmd.packadd("nvim-treesitter")
+vim.cmd.packadd("plenary.nvim")
+vim.cmd.packadd("telescope.nvim")
+vim.cmd.packadd("nvim-lspconfig")
+vim.cmd.packadd("typescript-tools.nvim")
+vim.cmd.packadd("FTerm.nvim")
+
 -- Colorscheme
 vim.cmd.colorscheme "catppuccin"
 
 -- Treesitter
-require"nvim-treesitter.configs".setup{
+require("nvim-treesitter.configs").setup {
   ensure_installed = { "haskell", "lua" },
   highlight = {
     enable = true,
@@ -23,7 +32,6 @@ require"nvim-treesitter.configs".setup{
 }
 
 -- Language Server Protocol Configs
-vim.cmd.packadd("nvim-lspconfig")
 vim.o.updatetime = 1000
 local on_attach = function(_, bufnr)
   vim.api.nvim_create_autocmd("CursorHold", {
@@ -42,9 +50,8 @@ local on_attach = function(_, bufnr)
   })
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 end
-require"lspconfig".hls.setup{
-  on_attach = on_attach,
-}
+require("lspconfig").hls.setup { on_attach = on_attach }
+require("typescript-tools").setup { on_attach = on_attach }
 
 -- Remember last file position
 vim.api.nvim_create_autocmd('BufReadPost', {
@@ -61,8 +68,6 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 })
 
 -- Fuzzy finder
-vim.cmd.packadd("plenary.nvim")
-vim.cmd.packadd("telescope.nvim")
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
@@ -74,7 +79,6 @@ vim.keymap.set("n", "<leader>gf", builtin.git_files, {})
 vim.keymap.set("n", "<leader>qf", builtin.quickfix, {})
 
 -- Scratch Terminal
-vim.cmd.packadd("FTerm.nvim")
 vim.keymap.set("n", "<leader>t", function()
   require("FTerm").toggle()
 end)

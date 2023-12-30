@@ -17,8 +17,11 @@
 	path = pack/commentary/start/commentary
 	url = https://github.com/tpope/vim-commentary.git
 [submodule "pack/catppuccin/start/nvim.git"]
-	path = pack/catppuccin/start/nvim.git
+	path = pack/colors/opt/catppuccin
 	url = https://github.com/catppuccin/nvim.git
 [submodule "pack/treesitter/opt/nvim-treesitter"]
-	path = pack/treesitter/start/nvim-treesitter
+	path = pack/treesitter/opt/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule "pack/lsp/start/typescript-tools.nvim"]
+	path = pack/lsp/opt/typescript-tools.nvim
+	url = https://github.com/pmizio/typescript-tools.nvim.git
