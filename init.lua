@@ -1,3 +1,5 @@
+require("config.lazy")
+
 -- VIM Options
 vim.opt.number = true
 vim.opt.smartcase = true
@@ -8,17 +10,6 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.signcolumn = "yes"
 vim.opt.scrolloff = 10
-
-vim.g.mapleader = ","
-
--- Packages
-vim.cmd.packadd("catppuccin")
-vim.cmd.packadd("nvim-treesitter")
-vim.cmd.packadd("plenary.nvim")
-vim.cmd.packadd("telescope.nvim")
-vim.cmd.packadd("nvim-lspconfig")
-vim.cmd.packadd("typescript-tools.nvim")
-vim.cmd.packadd("FTerm.nvim")
 
 -- Colorscheme
 vim.cmd.colorscheme "catppuccin"
