@@ -41,7 +41,7 @@ local on_attach = function(_, bufnr)
   })
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 end
-require("lspconfig").hls.setup { on_attach = on_attach }
+vim.lsp.config("hls", { setup = { on_attach = on_attach } })
 require("typescript-tools").setup { on_attach = on_attach }
 
 -- Remember last file position
